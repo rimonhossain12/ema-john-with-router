@@ -8,9 +8,9 @@ import Inventory from './Inventory/Inventory';
 
 function App() {
   return (
-    <div>
-      <Header></Header>
+      <div>
           <Router>
+              <Header></Header>
               <Switch>
                   <Route exact path="/">
                       <Shop></Shop>
