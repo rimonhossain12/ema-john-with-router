@@ -1,16 +1,18 @@
 import { useEffect, useState } from "react"
+import OrderReview from "../components/OrderReview/OrderReview";
 
 const useProducts = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('./products.json')
+        fetch('./Products.json')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, []);
-
     // return necessary things
-    return [products];
+    return [products, setProducts];
 }
 
-// export function for calling another folder or import
+// permission to another folder or another person
+
 export default useProducts;
+
